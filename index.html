@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link <!-- Required meta tags -- />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Netflix</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/netflix_logo.png" height="36px" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >TV Shows <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My List</a>
+            </li>
+          </ul>
+          <div class="right-icons">
+            <i class="fas fa-search"></i>
+            <span class="mx-3">KIDS</span>
+            <i class="fas fa-bell mr-3"></i>
+
+            <div class="dropdown d-inline">
+              <div
+                class="dropdown-toggle d-inline"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./assets/avatar.png" class="" height="36px" alt="" />
+              </div>
+
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a class="dropdown-item" href="#">My Movies</a>
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Setting</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid d-flex align-items-center">
+        <h3 class="text-white pl-2 mr-4">TV Shows</h3>
+        <div class="dropdown">
+          <button
+            class="btn text-secondary p-2 border border-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Genres
+          </button>
+          <div
+            class="dropdown-menu bg-dark"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a class="dropdown-item text-white" href="#">Action</a>
+            <a class="dropdown-item text-white" href="#">Comedy</a>
+            <a class="dropdown-item text-white" href="#">Oscar Winners</a>
+          </div>
+        </div>
+        <div class="text-secondary d-flex ml-auto pr-3">
+          <i class="fas fa-align-left p-1 border border-secondary"></i>
+          <i class="fas fa-th-large p-1 border border-secondary"></i>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- CAROUSEL CONTAINER ↓ -->
+      <div class="container-fluid my-3 px-5">
+        <!-- CAROUSEL ROW ONE  -->
+        <div class="row mx-auto my-3">
+          <div class="text-left text-light">
+            <h4>Trending Now</h4>
+          </div>
+          <div id="carRow1" class="carousel slide carou1" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <!-- CAROUSEL row1 img1 -->
+              <div class="carousel-item active">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="assets/media/media0.webp" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row1 img2 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="assets/media/media1.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row1 img3 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="assets/media/media2.webp" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row1 img4 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media3.webp" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row1 img5 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media4.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row1 img6 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media5.webp" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CAROUSEL row1 control previous -->
+            <a
+              class="carousel-control-prev bg-dark w-auto"
+              href="#carRow1"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <!-- CAROUSEL row1 control next -->
+            <a
+              class="carousel-control-next bg-dark w-auto"
+              href="#carRow1"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </div>
+        <!-- CAROUSEL ROW TWO  -->
+        <div class="row mx-auto my-3">
+          <div class="text-left text-light">
+            <h4>Watch it Again</h4>
+          </div>
+          <div id="carRow2" class="carousel slide carou2" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <!-- CAROUSEL row2 img1 -->
+              <div class="carousel-item active">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media6.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row2 img2 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media7.webp" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row2 img3 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media8.webp" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row2 img4 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media9.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row2 img5 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media10.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row2 img6 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media11.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CAROUSEL row2 control previous -->
+            <a
+              class="carousel-control-prev bg-dark w-auto"
+              href="#carRow2"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <!-- CAROUSEL row2 control next -->
+            <a
+              class="carousel-control-next bg-dark w-auto"
+              href="#carRow2"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </div>
+        <!-- CAROUSEL ROW THREE  -->
+        <div class="row mx-auto my-3">
+          <div class="text-left text-light">
+            <h4>New Releases</h4>
+          </div>
+          <div id="carRow3" class="carousel slide carou3" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <!-- CAROUSEL row3 img1 -->
+              <div class="carousel-item active">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media12.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row3 img2 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media13.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row3 img3 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img
+                          src="/assets/media/media14.webp"
+                          class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row3 img4 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media15.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row3 img5 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img
+                          src="/assets/media/media16.webp"
+                          class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CAROUSEL row3 img6 -->
+              <div class="carousel-item">
+                <div class="col-lg-2 col-md-6">
+                  <div class="movie-card m-1">
+                    <div class="movie-img">
+                      <a href="#"
+                        ><img src="/assets/media/media17.jpg" class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CAROUSEL row3 control previous -->
+            <a
+              class="carousel-control-prev bg-dark w-auto"
+              href="#carRow3"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <!-- CAROUSEL row1 control next -->
+            <a
+              class="carousel-control-next bg-dark w-auto"
+              href="#carRow3"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- END OF CAROUSEL CONTAINER  ↑ -->
+    </main>
+
+    <footer>
+      <div class="social-links d-flex mb-3">
+        <a href="https://www.facebook.com/Netflix" target="_blank">
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/Netflix" target="_blank">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.twitter.com/Netflix" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.youtube.com/Netflix" target="_blank">
+          <i class="fab fa-youtube fa-2x"></i>
+        </a>
+      </div>
+
+      <ul class="links d-flex align-items-start flex-wrap p-0">
+        <li><a target="_blank" href="#">Audio and Subtitles</a></li>
+        <li><a target="_blank" href="#">Audio Description</a></li>
+        <li>
+          <a target="_blank" href="https://help.netflix.com/">Help Center</a>
+        </li>
+        <li><a target="_blank" href="#">Gift Cards</a></li>
+        <li>
+          <a target="_blank" href="https://media.netflix.com/">Media Center</a>
+        </li>
+        <li>
+          <a target="_blank" href="http://ir.netflix.com/"
+            >Investor relations</a
+          >
+        </li>
+        <li><a target="_blank" href="https://jobs.netflix.com/">Jobs</a></li>
+        <li>
+          <a target="_blank" href="https://help.netflix.com/legal/termsofuse"
+            >Terms of Use</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://help.netflix.com/legal/privacy"
+            >Privacy</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://help.netflix.com/legal/notices"
+            >Legal Notices</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://www.netflix.com/Cookies"
+            >Cookie Preferences</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://help.netflix.com/legal/corpinfo"
+            >Corporation Information</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://help.netflix.com/contactus"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+
+      <button class="service-btn p-2 bg-transparent mb-4">Service Code</button>
+
+      <div class="copyright">
+        <p>© 1997-2021 Netflix, Inc.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CAROUSEL JAVASCRIPT ↓ -->
+    <script>
+      $(".carousel-item").each(function () {
+        var minPerSlide = 4
+        var next = $(this).next()
+        if (!next.length) {
+          next = $(this).siblings(":first")
+        }
+        next.children(":first-child").clone().appendTo($(this))
+
+        for (var i = 0; i < minPerSlide; i++) {
+          next = next.next()
+          if (!next.length) {
+            next = $(this).siblings(":first")
+          }
+
+          next.children(":first-child").clone().appendTo($(this))
+        }
+      })
+    </script>
+    <!-- END OF CAROUSEL JAVASCRIPT ↑ -->
+  </body>
+</html>

@@ -1,0 +1,128 @@
+/* CAROUSEL CSS ↓*/
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+/* medium - display 4  */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(50%);
+  }
+
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%);
+  }
+}
+
+/* large - display 6 */
+@media (min-width: 992px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(50%);
+  }
+
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%);
+  }
+}
+
+main {
+  min-height: 200vh;
+}
+
+.navbar a {
+  color: grey;
+}
+
+.right-icons {
+  color: white;
+}
+
+body {
+  background: #141414;
+}
+
+.movie-img {
+  background-color: #141414;
+}
+
+.text-left > h4 {
+  font-size: 1.15rem;
+}
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+  transform: translateX(0);
+}
+
+/* END OF CAROUSEL CSS ↑ */
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  margin: 20px auto 0;
+  padding: 0 4%;
+  color: grey;
+}
+
+.social-links a {
+  margin-right: 30px;
+}
+
+.social-icon {
+  height: 27px;
+  border-radius: 7px;
+}
+
+.links li {
+  line-height: 1.2;
+  flex-basis: 50%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .links li {
+    flex-basis: 25%;
+  }
+}
+
+.links li a {
+  color: grey;
+}
+.links li a:hover {
+  text-decoration: underline;
+}
+
+.service-btn {
+  color: grey;
+  border: 1px solid grey;
+}
+.service-btn:hover {
+  color: white;
+}
+
+footer i {
+  color: grey;
+}
+.copyright {
+  font-size: 11px;
+}
