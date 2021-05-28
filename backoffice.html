@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>BackOffice</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/netflix_logo.png" height="36px" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >TV Shows <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a href="./backoffice.html" class="nav-link">Backoffice</a>  
+            </li>
+            
+
+          </ul>
+          <div class="right-icons">
+            <i class="fas fa-search"></i>
+            <span class="mx-3">KIDS</span>
+            <i class="fas fa-bell mr-3"></i>
+
+            <div class="dropdown d-inline">
+              <div
+                class="dropdown-toggle d-inline"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./assets/avatar.png" class="" height="36px" alt="" />
+              </div>
+
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a class="dropdown-item" href="#">My Movies</a>
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Setting</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h1 class="mt-5">Add Movie</h1>
+        <hr>
+        <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input  class="form-control" id="name" placeholder="Quiet Place">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Description</label>
+              <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input  class="form-control" id="category" placeholder="Horror">
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">Image URL</label>
+                <input  class="form-control" id="imageUrl" placeholder="http://">
+            </div>
+         
+        
+          
+            <div class="form-group d-flex justify-content-end">
+               <button type="reset" class="btn btn-outline-dark w-25 mr-2">Reset</button>
+               <button type="submit" class="btn btn-warning mr-2 w-25">Save</button>
+              </div>
+          </form>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+      <script>
+
+const BASE_URL = "https://striveschool-api.herokuapp.com/api/movies/"
+              const HEADERS = new Headers({
+                "Content-Type" : "application/json",
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlNWM1ZGNlYWY0ODAwMTVjOTE5NDEiLCJpYXQiOjE2MjIxOTY3ODQsImV4cCI6MTYyMzQwNjM4NH0.XcC-FRFT7sOVnTSn2LSO8c2STr5i9zbAbktqgHaUVq0"
+              })
+
+              const postMovie = (movie, callback) =>{
+              fetch(BASE_URL,
+              {headers: HEADERS,
+              method:'POST',
+              body:JSON.stringify(movie)  })
+                .then(res=> res.json())
+                .then((data) => console.log(  data))}
+
+                const formSubmit = function (e) {
+                e.preventDefault()
+                const name = document.getElementById('name').value
+                const description = document.getElementById('description').value
+                const category = document.getElementById('category').value
+                const imageUrl = document.getElementById('imageUrl').value
+                const movie  = {name, brand, imageUrl, price, description}
+                console.log({movie})
+                postMovie(movie, (err, data)=>{
+                    if (err){
+                            console.log({err});
+                    }
+                    else{
+                        e.target.reset()
+                    }
+                }
+                )    }            
+
+      </script>
+
+  </body>
+</html>

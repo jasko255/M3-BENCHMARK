@@ -59,8 +59,10 @@
               <a class="nav-link" href="#">Recently Added</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My List</a>
+              <a href="./backoffice.html" class="nav-link">Backoffice</a>  
             </li>
+            
+
           </ul>
           <div class="right-icons">
             <i class="fas fa-search"></i>
@@ -550,5 +552,29 @@
       })
     </script>
     <!-- END OF CAROUSEL JAVASCRIPT ↑ -->
+    <script>
+      const BASE_URL = "https://striveschool-api.herokuapp.com/api/movies/"
+              const HEADERS = new Headers({
+                "Content-Type" : "application/json",
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlNWM1ZGNlYWY0ODAwMTVjOTE5NDEiLCJpYXQiOjE2MjIxOTY3ODQsImV4cCI6MTYyMzQwNjM4NH0.XcC-FRFT7sOVnTSn2LSO8c2STr5i9zbAbktqgHaUVq0"
+              })
+            //   const getProdcts = (callback) =>{
+            //   fetch(BASE_URL, {headers: HEADERS})
+            //     .then(res=> res.json())
+            //     .then((data) => console.log(  data))
+            //     .catch((error) => callback(error, null))
+            // }
+
+              window.onload = function(){
+                response()
+              }
+              const response = function(){
+                fetch(BASE_URL, {headers: HEADERS}).then(res => res.json())
+                .then(movies => {
+                  console.log(movies);
+                } )
+              }
+
+    </script>
   </body>
 </html>
